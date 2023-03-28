@@ -128,3 +128,15 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .idea/
+
+.vscode/
+
+static/
+/static/
+*/static/
+
+media/
+/media/
+*/media/
+
+**/migrations/*
