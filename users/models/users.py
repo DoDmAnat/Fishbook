@@ -6,11 +6,11 @@ from users.models.managers import UserManager
 
 
 class User(AbstractUser):
-    username = models.CharField("Логин", max_length=30, unique=True, null=True, blank=True)
-    email = models.EmailField("Электронная почта", max_length=254, unique=True, blank=True)
+    username = models.CharField("Логин", max_length=30, unique=True, null=True)
+    email = models.EmailField("Электронная почта", max_length=254, unique=True)
     first_name = models.CharField("Имя", max_length=30, blank=True)
     last_name = models.CharField("Фамилия", max_length=30, blank=True)
-    phone_number = PhoneNumberField("Телефон", unique=True, null=True, blank=True)
+    phone_number = PhoneNumberField("Телефон", unique=True, null=True)
     photo = models.ImageField(
         "Фотография пользователя", upload_to="users", blank=True, null=True
     )
